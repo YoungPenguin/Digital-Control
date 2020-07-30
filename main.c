@@ -7,7 +7,7 @@
 //
 // The main program file is called:
 //
-//       ADC_EPWM_PI.c
+//       main.c
 //
 // Functionality and usability:
 //------------------------------------------------------------------------------
@@ -78,12 +78,12 @@ double K3   = 0.0;
 
 int out_max = 297; // 150 kHz - calculated by the TBPRD
 int out_min = 33;
-double PI_out      = 0;
-double error       = 0;
-double PI_output   = 0;
-double Ts          = 0.00000666666; // 1/150000  - 150 kHz
-double prev_out    = 0;
-double prev_error  = 0;
+float PI_out      = 0.0;
+float error       = 0.0;
+float PI_output   = 0.0;
+float Ts          = 0.0;
+float prev_out    = 0.0;
+float prev_error  = 0.0;
 
 interrupt void adc_isr(void) {
     Digital_Result = ADC_readResult(myAdc, ADC_ResultNumber_0);
