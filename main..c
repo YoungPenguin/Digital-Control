@@ -1,9 +1,9 @@
 //----------------------------------------------------------------------------------
-//  FILE:           ADC_EPWM_PI.c
+//  FILE:           main.c
 //
-//  Description:    PI regulation configuration function for flyback stage
+//  Description:    PI-lead regulation configuration function
 //
-//  Target:         TMS320F2802x,
+//  Target:         MSP,
 //
 // The main program file is called:
 //
@@ -226,6 +226,3 @@ void set_duty( int a) {
  PWM_setCmpA(myPwm4, CMPA);
  PWM_setCmpB(myPwm4, CMPA);// Set compare A value
 }
-
-//===========================================================================
-// No more. stop pls
